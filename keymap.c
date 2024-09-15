@@ -48,7 +48,7 @@ enum {
 };
 
 // Tap dance definition
-qk_tap_dance_action_t tap_dance_actions[] = {
+tap_dance_action_t tap_dance_actions[] = {
   [TD_ACTL] = ACTION_TAP_DANCE_DOUBLE(KC_LALT, KC_LCTL),
   [TD_CALT] = ACTION_TAP_DANCE_DOUBLE(KC_LCTL, KC_LALT),
 };
@@ -87,15 +87,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,\
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_TRNS, KC_TRNS,KC_LSHIFT,    KC_RSHIFT, RCTL(KC_B), KC_TRNS \
+                                          KC_TRNS, KC_TRNS,KC_LSFT,    KC_RSFT, RCTL(KC_B), KC_TRNS \
                                       //`--------------------------'  `--------------------------'
   ),
 
   [_CONFIG] = LAYOUT_split_3x6_3( \
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      RESET, KC__MUTE, KC__VOLDOWN, KC__VOLUP, KC_BRIU, KC_BRID,                XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,\
+      XXXXXXX, KC_MUTE, KC_VOLD, KC_VOLU, KC_BRIU, KC_BRID,                XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,\
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      DEBUG, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX, XXXXXXX,                       XXXXXXX, KC_PGDN, KC_PGUP, XXXXXXX, XXXXXXX, XXXXXXX,\
+      XXXXXXX, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX, XXXXXXX,                       XXXXXXX, KC_PGDN, KC_PGUP, XXXXXXX, XXXXXXX, XXXXXXX,\
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       LCTL(KC_LSFT), RGB_HUD, RGB_SAD, RGB_VAD, XXXXXXX, XXXXXXX,               XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,\
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
