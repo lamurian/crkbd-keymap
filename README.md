@@ -1,13 +1,5 @@
 # Soundmonster's layout for Corne
 
-Features:
+This layout was first adapted from [Soundmonster's](https://github.com/soundmonster) layout for Corne keyboard. I made several changes here and there, and now it's a completely different beast. I removed nearly all features that Soundmonster has neatly included in the keymap to keep it minimal. Depicted below is the layers of my keymap. The image is generated using [caksoylar](https://github.com/caksoylar)'s [keymap drawer](https://github.com/caksoylar/keymap-drawer).
 
-* Modern OLED support (many thanks to @drashna):
-  * Proper orientation
-  * Graphic layer indicator ↑ ↓
-  * Graphic modifier indicator ⌘ ⇧ ⌥  ⌃
-* Similar enough to the default keymap so you can easily port your custom keymap to it
-* Mac-friendly (Command and Option on the thumbs)
-* Vim-friendly (Esc, `:` and Ctrl on the thumbs)
-* Full per-key RGB Matrix support out of the box (you still have to go through the nightmare of soldering yourself though 😉)
-
+![Corne 3x5 layout with 2 thumb clusters](keymap.svg)
