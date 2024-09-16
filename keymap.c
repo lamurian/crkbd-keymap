@@ -86,7 +86,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX,  KC_ESC,  KC_GRV, KC_BSPC,  KC_TAB, KC_CAPS,                      KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT,  KC_ENT, XXXXXXX,\
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX,   TG(5),   TG(4),   TG(3),   TG(2),  TH_GSC,                       TH_GSC, XXXXXXX,  TH_ALT,  TH_CTL, KC_TRNS, XXXXXXX,\
+      XXXXXXX, KC_LSFT,   TG(4),   TG(3),   TG(2),   TG(5),                      XXXXXXX, XXXXXXX,  TH_ALT,  TH_CTL, KC_RSFT, XXXXXXX,\
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           XXXXXXX,   TH_GS, KC_TRNS,   KC_TRNS, KC_TRNS, XXXXXXX \
                                       //`--------------------------'  `--------------------------'
@@ -140,3 +140,34 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                       //`--------------------------'  `--------------------------'
   )
 };
+
+// Combo keys
+#ifdef COMBO_ENABLE
+const uint16_t PROGMEM combo_esc[]    = {KC_Q,    KC_W,     COMBO_END};
+const uint16_t PROGMEM combo_tab[]    = {KC_W,    KC_E,     COMBO_END};
+const uint16_t PROGMEM combo_cleft[]  = {KC_E,    KC_R,     COMBO_END};
+const uint16_t PROGMEM combo_cright[] = {KC_I,    KC_U,     COMBO_END};
+const uint16_t PROGMEM combo_del[]    = {KC_O,    KC_I,     COMBO_END};
+const uint16_t PROGMEM combo_bspc[]   = {KC_P,    KC_O,     COMBO_END};
+const uint16_t PROGMEM combo_lgsc[]   = {KC_GRV,  KC_BSPC,  COMBO_END};
+const uint16_t PROGMEM combo_lgs[]    = {KC_BSPC, KC_TAB,   COMBO_END};
+const uint16_t PROGMEM combo_rgsc[]   = {KC_UP,   KC_RIGHT, COMBO_END};
+const uint16_t PROGMEM combo_rgs[]    = {KC_DOWN, KC_UP,    COMBO_END};
+const uint16_t PROGMEM combo_ntab[]   = {KC_TAB,  KC_UP,    COMBO_END};
+const uint16_t PROGMEM combo_ptab[]   = {KC_TAB,  KC_DOWN,  COMBO_END};
+
+combo_t key_combos[] = {
+  COMBO(combo_esc,    KC_ESC),
+  COMBO(combo_tab,    KC_TAB),
+  COMBO(combo_cleft,  LCTL(KC_LEFT)),
+  COMBO(combo_cright, LCTL(KC_RIGHT)),
+  COMBO(combo_del,    KC_DEL),
+  COMBO(combo_bspc,   KC_BSPC),
+  COMBO(combo_lgsc,   TH_GSC),
+  COMBO(combo_lgs,    TH_GS),
+  COMBO(combo_rgsc,   TH_GSC),
+  COMBO(combo_rgs,    TH_GS),
+  COMBO(combo_ntab,   LCTL(KC_TAB)),
+  COMBO(combo_ptab,   RCS(KC_TAB)),
+};
+#endif
