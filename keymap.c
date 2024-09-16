@@ -94,9 +94,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.       Layer 2      ,-----------------------------------------------------.
       XXXXXXX, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                      KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, XXXXXXX,\
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX,  KC_ESC,  KC_GRV, KC_BSPC,  KC_TAB, KC_CAPS,                      KC_LBRC, KC_MINS, KC_EQL,  KC_RBRC, KC_BSLS, XXXXXXX,\
+      XXXXXXX,  KC_ESC,  KC_GRV, KC_BSPC,  KC_TAB, KC_CAPS,                      KC_LBRC, KC_MINS, KC_EQL,  KC_RBRC, KC_QUOT, XXXXXXX,\
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX,   TO(0), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_QUOT, XXXXXXX,\
+      XXXXXXX,   TO(0), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_BSLS, XXXXXXX,\
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           XXXXXXX, XXXXXXX,KC_LSFT,    KC_RSFT, RCTL(KC_B), XXXXXXX \
                                       //`--------------------------'  `--------------------------'
