@@ -63,6 +63,8 @@ tap_dance_action_t tap_dance_actions[] = {
 #define TH_CTL TD(TD_CALT)
 #define TH_LCA LCTL(KC_LALT)
 #define TH_RCA RCTL(KC_RALT)
+#define TH_GS  LGUI(KC_LSFT)
+#define TH_GSC SGUI(KC_LCTL)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT_split_3x6_3( \
@@ -84,9 +86,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX,  KC_ESC,  KC_GRV, KC_BSPC,  KC_TAB, KC_CAPS,                      KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT,  KC_ENT, XXXXXXX,\
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX,   TG(5),   TG(4),   TG(3),   TG(2), XXXXXXX,                      XXXXXXX, XXXXXXX,  TH_ALT,  TH_CTL, KC_TRNS, XXXXXXX,\
+      XXXXXXX,   TG(5),   TG(4),   TG(3),   TG(2),  TH_GSC,                       TH_GSC, XXXXXXX,  TH_ALT,  TH_CTL, KC_TRNS, XXXXXXX,\
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          XXXXXXX, KC_TRNS, KC_TRNS,   KC_TRNS, KC_TRNS, XXXXXXX \
+                                          XXXXXXX,   TH_GS, KC_TRNS,   KC_TRNS, KC_TRNS, XXXXXXX \
                                       //`--------------------------'  `--------------------------'
     ),
 
