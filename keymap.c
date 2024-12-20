@@ -56,9 +56,9 @@ tap_dance_action_t tap_dance_actions[] = {
 // Modified keys
 #define MO_Z    MT(MOD_LSFT, KC_Z)
 #define MO_SLSH MT(MOD_RSFT, KC_SLSH)
-#define MO_MUTE KC__MUTE
-#define MO_VOLD KC__VOLDOWN
-#define MO_VOLU KC__VOLUP
+#define MO_MUTE KC_MUTE
+#define MO_VOLD KC_VOLD
+#define MO_VOLU KC_VOLU
 #define MO_LEFT LCTL(KC_LEFT)
 #define MO_RGHT LCTL(KC_RIGHT)
 
