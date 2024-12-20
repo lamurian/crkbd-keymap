@@ -21,8 +21,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 
 // Configure combo
-#define COMBO_COUNT 12
-#define COMBO_TERM  10
+#define COMBO_COUNT 10
+#define COMBO_TERM  20
 
 //#define USE_MATRIX_I2C
 
@@ -41,6 +41,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define TAPPING_FORCE_HOLD
 #define TAPPING_TERM 200
 #define RETRO_TAPPING
+#define IGNORE_MOD_TAP_INTERRUPT
 
 #ifdef RGBLIGHT_ENABLE
     #undef RGBLED_NUM
